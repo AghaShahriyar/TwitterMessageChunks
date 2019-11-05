@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Message SplitVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MessageSplitVC" customModule="Twitter_Message_Split" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I can't believe tweeter now supports chunking my messages, so I don't have to do it myself." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tc2-OU-cUs">
+                                <rect key="frame" x="20" y="97" width="374" height="232"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="232" id="4y3-fO-ZbS"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type Your Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WT0-k1-VLj">
+                                <rect key="frame" x="20" y="64" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="50" borderStyle="roundedRect" placeholder="Enter Split Size" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6uU-PA-IBv">
+                                <rect key="frame" x="20" y="337" width="374" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="zof-ze-s5l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="336-cf-8W1">
+                                <rect key="frame" x="20" y="391" width="374" height="42"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="SPLIT">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="splitMessageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fMd-xO-Uvj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opj-SF-rqf">
+                                <rect key="frame" x="20" y="445" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mhB-PO-P4R">
+                                <rect key="frame" x="20" y="486" width="374" height="356"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="336-cf-8W1" firstAttribute="height" secondItem="6uU-PA-IBv" secondAttribute="height" id="6BM-aJ-YmJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tc2-OU-cUs" secondAttribute="trailing" constant="20" id="9Sv-Y0-Ivq"/>
+                            <constraint firstItem="336-cf-8W1" firstAttribute="leading" secondItem="6uU-PA-IBv" secondAttribute="leading" id="9eA-N3-Jdr"/>
+                            <constraint firstItem="Tc2-OU-cUs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9wP-u4-S6a"/>
+                            <constraint firstItem="WT0-k1-VLj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Gbf-f2-vMg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mhB-PO-P4R" secondAttribute="bottom" constant="20" id="JBR-kQ-R47"/>
+                            <constraint firstItem="6uU-PA-IBv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LYE-aM-pcs"/>
+                            <constraint firstItem="336-cf-8W1" firstAttribute="top" secondItem="6uU-PA-IBv" secondAttribute="bottom" constant="12" id="NlE-6K-dq8"/>
+                            <constraint firstItem="opj-SF-rqf" firstAttribute="top" secondItem="336-cf-8W1" secondAttribute="bottom" constant="12" id="PQY-4f-P7b"/>
+                            <constraint firstItem="WT0-k1-VLj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RoR-Gs-dZs"/>
+                            <constraint firstItem="mhB-PO-P4R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UF7-Kd-7ed"/>
+                            <constraint firstItem="opj-SF-rqf" firstAttribute="leading" secondItem="336-cf-8W1" secondAttribute="leading" id="UkR-nf-e4r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6uU-PA-IBv" secondAttribute="trailing" constant="20" id="bqB-Tk-tI2"/>
+                            <constraint firstItem="6uU-PA-IBv" firstAttribute="top" secondItem="Tc2-OU-cUs" secondAttribute="bottom" constant="8" id="dUs-D9-cnC"/>
+                            <constraint firstItem="mhB-PO-P4R" firstAttribute="top" secondItem="opj-SF-rqf" secondAttribute="bottom" constant="20" id="fcJ-t4-9Vb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mhB-PO-P4R" secondAttribute="trailing" constant="20" id="hrj-YP-tdV"/>
+                            <constraint firstItem="336-cf-8W1" firstAttribute="trailing" secondItem="6uU-PA-IBv" secondAttribute="trailing" id="nqp-es-e10"/>
+                            <constraint firstItem="Tc2-OU-cUs" firstAttribute="top" secondItem="WT0-k1-VLj" secondAttribute="bottom" constant="12" id="y7D-zU-QrN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputMessageView" destination="Tc2-OU-cUs" id="OV3-es-rAF"/>
+                        <outlet property="resultView" destination="mhB-PO-P4R" id="rOO-Vr-AYg"/>
+                        <outlet property="splitSize" destination="6uU-PA-IBv" id="A3j-pH-QQI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+</document>
